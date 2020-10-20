@@ -11,6 +11,7 @@ export default function LengthConverter() {
         <h1>Length Converter</h1>
         <LengthForm />
         <ConversionBtns />
+        <p>* For decimal numbers, use "." not ",". </p>
       </div>
     </Layout>
   );

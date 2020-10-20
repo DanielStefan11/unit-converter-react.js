@@ -1,7 +1,7 @@
 import React from "react";
 // React Redux
 import { connect } from "react-redux";
-import { updateInput } from "../../../redux/form/FormActions";
+import { updateInput } from "../../../redux/lengthForm/FormActions";
 
 function LengthForm(props) {
   return (

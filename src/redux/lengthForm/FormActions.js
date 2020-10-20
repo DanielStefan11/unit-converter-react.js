@@ -13,12 +13,6 @@ export function updateInput(payload) {
   };
 }
 
-// export function updateOutput(payload) {
-//   return {
-//     type: UPDATE_OUTPUT,
-//     payload,
-//   };
-// }
 export function updateOutput() {
   return {
     type: UPDATE_OUTPUT,
