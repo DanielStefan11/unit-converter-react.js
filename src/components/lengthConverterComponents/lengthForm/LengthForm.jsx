@@ -14,7 +14,6 @@ function LengthForm(props) {
           onChange={(e) => {
             let valueToConvert = e.target.value;
             props.updateInput(valueToConvert);
-            console.log(props.inputValue);
           }}
         />
       </div>

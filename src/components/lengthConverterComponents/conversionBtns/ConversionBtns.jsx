@@ -24,6 +24,7 @@ function ConversionBtns(props) {
           <option value="mm">Milimeters</option>
           <option value="cm">Centimeters</option>
           <option value="inch">Inches</option>
+          <option value="ft">Feet</option>
           <option value="yards">Yards</option>
           <option value="m">Meters</option>
           <option value="km">Kilometers</option>
@@ -41,6 +42,7 @@ function ConversionBtns(props) {
           <option value="mm">Milimeters</option>
           <option value="cm">Centimeters</option>
           <option value="inch">Inches</option>
+          <option value="ft">Feet</option>
           <option value="yards">Yards</option>
           <option value="m">Meters</option>
           <option value="km">Kilometers</option>

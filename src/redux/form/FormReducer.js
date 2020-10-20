@@ -35,44 +35,153 @@ export function formReducer(state = initialState, action) {
 
     case UPDATE_OUTPUT:
       let convertedValue;
+      // Milimeters To:
       if (state.length1 === "mm" && state.length2 === "mm") {
-        convertedValue = state.input;
+        convertedValue = state.input + " mm (from mm)";
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "cm") {
-        convertedValue = state.input * 0.1;
+        convertedValue = state.input * 0.1 + " cm (from mm)";
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "inch") {
-        convertedValue = state.input * 0.0393700787;
+        convertedValue = state.input * 0.0393700787 + " inch (from mm)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "mm" && state.length2 === "ft") {
+        convertedValue = state.input * 0.0032808 + " ft. (from mm)";
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "yards") {
-        convertedValue = state.input * 0.0010936133;
+        convertedValue = state.input * 0.0010936133 + " yd (from mm)";
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "m") {
-        convertedValue = state.input * 0.001;
+        convertedValue = state.input * 0.001 + " m (from mm)";
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "km") {
-        convertedValue = state.input * 0.000001;
+        convertedValue = state.input * 0.000001 + " km from (mm)";
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "miles") {
-        convertedValue = state.input * 0.00000062137;
+        convertedValue = state.input * 0.00000062137 + " mil. (from mm)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      }
+
+      // Centimeters To:
+      else if (state.length1 === "cm" && state.length2 === "mm") {
+        convertedValue = state.input / 0.1 + " mm (from cm)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "cm" && state.length2 === "cm") {
+        convertedValue = state.input + " cm (from cm)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "cm" && state.length2 === "inch") {
+        convertedValue = state.input * 0.3937 + " inch (from cm)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "cm" && state.length2 === "ft") {
+        convertedValue = state.input * 0.032808 + " ft. (from cm)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "cm" && state.length2 === "yards") {
+        convertedValue = state.input * 0.010936 + " yd. (from cm)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "cm" && state.length2 === "m") {
+        convertedValue = state.input / 100 + " m (from cm)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "cm" && state.length2 === "km") {
+        convertedValue = state.input / 100000 + " km (from cm)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "cm" && state.length2 === "miles") {
+        convertedValue = state.input * 0.0000062137 + " mil. (from cm)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      }
+
+      // Inches to:
+      else if (state.length1 === "inch" && state.length2 === "mm") {
+        convertedValue = state.input / 0.03937 + " mm (from inch)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "inch" && state.length2 === "cm") {
+        convertedValue = state.input / 0.3937 + " cm (from inch)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "inch" && state.length2 === "inch") {
+        convertedValue = state.input + " inch (from inch)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "inch" && state.length2 === "ft") {
+        convertedValue = state.input * 0.083333 + " ft. (from inch)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "inch" && state.length2 === "yards") {
+        convertedValue = state.input * 0.027778 + " yd. (from inch)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "inch" && state.length2 === "m") {
+        convertedValue = state.input / 39.37 + " m (from inch)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "inch" && state.length2 === "km") {
+        convertedValue = state.input / 39370 + " km (from inch)";
+        return {
+          ...state,
+          output: convertedValue,
+        };
+      } else if (state.length1 === "inch" && state.length2 === "miles") {
+        convertedValue = state.input * 0.000015783 + " mil. (from inch)";
         return {
           ...state,
           output: convertedValue,
