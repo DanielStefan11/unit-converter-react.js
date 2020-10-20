@@ -17,7 +17,6 @@ function ConversionBtns(props) {
           onChange={(e) => {
             let valueOfLength1 = e.target.value;
             props.updateLength1(valueOfLength1);
-            console.log(typeof props.length1);
           }}
         >
           <option value="reset">From:</option>
@@ -64,13 +63,6 @@ function ConversionBtns(props) {
   );
 }
 
-function mapStateToProps(state) {
-  return {
-    inputValue: state.form.input,
-    length1: state.form.length1,
-  };
-}
-
 function mapDispatchToProps(dispatch) {
   return {
     updateOutput: () => dispatch(updateOutput()),
@@ -80,4 +72,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ConversionBtns);
+export default connect(null, mapDispatchToProps)(ConversionBtns);
