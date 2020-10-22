@@ -1,0 +1,71 @@
+@import "../../../styleConfigs";
+
+.length-btns {
+  margin-top: 3rem;
+
+  .select-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    & > select {
+      padding: 0.5rem;
+      width: 150px;
+      border: 1px solid $layout-color;
+      border-radius: 5px;
+      color: $layout-color;
+      font-size: 1.1rem;
+      font-family: $main-font;
+      font-weight: bold;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .btns-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    & > * {
+      width: 150px;
+      padding: 0.5rem;
+      font-size: 1.1rem;
+      font-family: $main-font;
+      cursor: pointer;
+    }
+
+    .convert-btn:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      border: 1px solid $layout-color;
+      background-color: transparent;
+      color: $layout-color;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        background-color: $layout-color;
+        color: $light-color;
+      }
+    }
+
+    input[type="reset"] {
+      background-color: $layout-color;
+      color: $light-color;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $contrast-color;
+        background-color: darken($layout-color, 20%);
+      }
+    }
+  }
+}

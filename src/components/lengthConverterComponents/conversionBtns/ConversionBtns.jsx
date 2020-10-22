@@ -7,11 +7,15 @@ import {
   updateLength2,
   reset,
 } from "../../../redux/lengthForm/FormActions";
+// Style
+import "./ConversionBtns.scss";
+// React Icons
+import { SiConvertio } from "react-icons/si";
 
 function ConversionBtns(props) {
   return (
-    <div>
-      <form>
+    <form className="length-btns">
+      <div className="select-container">
         <select
           name="length-1"
           onChange={(e) => {
@@ -47,19 +51,23 @@ function ConversionBtns(props) {
           <option value="km">Kilometers</option>
           <option value="miles">Miles</option>
         </select>
+      </div>
 
+      <div className="btns-container">
         <button
+          className="convert-btn"
           onClick={(e) => {
             e.preventDefault();
             props.updateOutput();
           }}
         >
+          <SiConvertio />
           Convert
         </button>
 
         <input type="reset" value="Reset" onClick={() => props.reset()} />
-      </form>
-    </div>
+      </div>
+    </form>
   );
 }
 

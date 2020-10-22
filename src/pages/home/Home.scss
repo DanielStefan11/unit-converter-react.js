@@ -1,0 +1,55 @@
+@import "../../styleConfigs";
+
+.home-page h2 {
+  text-align: center;
+  color: $contrast-color;
+}
+
+.icons-container {
+  height: 300px;
+  position: relative;
+  margin-top: 3rem;
+
+  .converter-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5rem;
+    transform: rotate(25deg);
+    color: $converter-icon-color;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+
+    &:hover {
+      transform: rotate(100deg);
+    }
+  }
+
+  .termometer-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 6rem;
+    transform: rotate(25deg);
+    color: $termometer-icon-color;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: rotate(-25deg);
+    }
+  }
+
+  .speed-icon {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    font-size: 6rem;
+    transform: rotate(-25deg);
+    color: $speed-icon-color;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: rotate(25deg);
+    }
+  }
+}

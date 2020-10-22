@@ -1,0 +1,34 @@
+@import "../../../styleConfigs";
+
+.length-form {
+  display: flex;
+  flex-direction: column;
+
+  & > input {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 350px;
+    border: 1px solid $layout-color;
+    border-radius: 30px;
+    font-family: $main-font;
+    font-size: 1.1rem;
+    outline: none;
+
+    &:first-child {
+      color: $layout-color;
+
+      &::placeholder {
+        color: $layout-color;
+      }
+    }
+
+    &:last-child {
+      background-color: $layout-color;
+      color: $light-color;
+
+      &::placeholder {
+        color: $light-color;
+      }
+    }
+  }
+}

@@ -3,11 +3,13 @@ import React from "react";
 import Layout from "../../components/layout/Layout";
 import LengthForm from "../../components/lengthConverterComponents/lengthForm/LengthForm";
 import ConversionBtns from "../../components/lengthConverterComponents/conversionBtns/ConversionBtns";
+// Style
+import "./LengthConverter.scss";
 
 export default function LengthConverter() {
   return (
     <Layout>
-      <div className="container">
+      <div className="container length-page">
         <h1>Length Converter</h1>
         <LengthForm />
         <ConversionBtns />

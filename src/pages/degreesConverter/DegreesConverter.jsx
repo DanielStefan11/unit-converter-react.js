@@ -6,7 +6,7 @@ import DegreesForm from "../../components/degreesConverterComponents/degreesForm
 export default function DegreesConverter() {
   return (
     <Layout>
-      <div>
+      <div className="container">
         <h1>Degrees Converter</h1>
         <DegreesForm />
       </div>

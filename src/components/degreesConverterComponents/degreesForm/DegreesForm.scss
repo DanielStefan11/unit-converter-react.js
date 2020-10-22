@@ -1,0 +1,74 @@
+@import "../../../styleConfigs";
+
+.degrees-form {
+  margin-top: 3rem;
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+
+    & > input {
+      width: 350px;
+      padding: 0.5rem;
+      font-size: 1.1rem;
+      font-family: $main-font;
+      color: $layout-color;
+      border: 1px solid $layout-color;
+      margin-top: 2rem;
+      border-radius: 30px;
+      outline: none;
+
+      &:first-child::placeholder {
+        color: $layout-color;
+        font-family: $main-font;
+      }
+
+      &:last-child {
+        background-color: $layout-color;
+        color: $light-color;
+
+        &::placeholder {
+          color: $light-color;
+        }
+      }
+    }
+  }
+
+  .btns-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    select {
+      margin-bottom: 2rem;
+      padding: 0.5rem;
+      border: 1px solid $layout-color;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      color: $layout-color;
+      font-family: $main-font;
+      outline: none;
+    }
+
+    input[type="reset"] {
+      padding: 0.5rem;
+      margin-top: 3rem;
+      font-size: 1.1rem;
+      font-family: $main-font;
+      border-radius: 5px;
+      outline: none;
+      border: 2px solid $layout-color;
+      background-color: transparent;
+      color: $layout-color;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover,
+      &:focus {
+        background-color: $layout-color;
+        color: $contrast-color;
+      }
+    }
+  }
+}

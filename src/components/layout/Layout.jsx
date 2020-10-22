@@ -8,7 +8,6 @@ import "./Layout.scss";
 export default function Layout(props) {
   return (
     <div className="layout">
-      {/* <Header /> */}
       <Navbar />
       {props.children}
       <Footer />

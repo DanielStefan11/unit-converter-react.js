@@ -1,0 +1,11 @@
+@import "../../styleConfigs";
+
+.length-page {
+  p {
+    text-align: center;
+    color: $layout-color;
+    font-size: 1.1rem;
+    margin-top: 6rem;
+    font-weight: bold;
+  }
+}

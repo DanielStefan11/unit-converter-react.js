@@ -2,26 +2,28 @@ import React from "react";
 // React Redux
 import { connect } from "react-redux";
 import { updateInput } from "../../../redux/lengthForm/FormActions";
+// Style
+import "./LengthForm.scss";
 
 function LengthForm(props) {
   return (
-    <form>
-      <div>
-        <label>Input Value</label>
-        <input
-          type="number"
-          value={props.inputValue}
-          onChange={(e) => {
-            let valueToConvert = e.target.value;
-            props.updateInput(valueToConvert);
-          }}
-        />
-      </div>
+    <form className="length-form">
+      <input
+        type="number"
+        value={props.inputValue}
+        placeholder="Input Value"
+        onChange={(e) => {
+          let valueToConvert = e.target.value;
+          props.updateInput(valueToConvert);
+        }}
+      />
 
-      <div>
-        <label>Output</label>
-        <input type="text" value={props.outputValue} disabled />
-      </div>
+      <input
+        type="text"
+        value={props.outputValue}
+        placeholder="Output Value"
+        disabled
+      />
     </form>
   );
 }

@@ -4,14 +4,15 @@ import { connect } from "react-redux";
 import {
   updateDegreesInput,
   updateDegreesOutput,
-  // fahrenheitToCelsius,
   resetDegrees,
 } from "../../../redux/degreesForm/DegreesFormActions";
+// Style
+import "./DegreesForm.scss";
 
 function DegreesForm(props) {
   return (
-    <form>
-      <div>
+    <form className="degrees-form">
+      <div className="input-container">
         <input
           type="number"
           placeholder="Insert value to convert"
@@ -28,18 +29,25 @@ function DegreesForm(props) {
           disabled
         />
       </div>
-      <select
-        name="convert"
-        onChange={(e) => {
-          let convertingMode = e.target.value;
-          props.updateDegreesOutput(convertingMode);
-        }}
-      >
-        <option value="default">Choose how to convert</option>
-        <option value="F-to-C">Fahrenheit to Celsius</option>
-        <option value="C-to-F">Celsius to Fahrenheit</option>
-      </select>
-      <input type="reset" onClick={() => props.resetDegrees()} />
+
+      <div className="btns-container">
+        <select
+          name="convert"
+          onChange={(e) => {
+            let convertingMode = e.target.value;
+            props.updateDegreesOutput(convertingMode);
+          }}
+        >
+          <option value="default">Choose how to convert</option>
+          <option value="F-to-C">Fahrenheit to Celsius</option>
+          <option value="C-to-F">Celsius to Fahrenheit</option>
+        </select>
+        <input
+          type="reset"
+          value="Reset"
+          onClick={() => props.resetDegrees()}
+        />
+      </div>
     </form>
   );
 }
