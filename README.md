@@ -8,7 +8,7 @@ Simple Converter created with React.js and Redux.
 - Degrees/Temperature Converter (Fahrenheit to Celsius and Celsius to Fahrenheit)
 - More functionalities soon ...
 
-### Technologies used
+### Technologies
 
 - React.js (create-react-app)
 - SASS (CSS3)
