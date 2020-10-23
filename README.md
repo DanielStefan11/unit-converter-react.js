@@ -2,6 +2,8 @@
 
 Simple Converter created with React.js and Redux.
 
+Deployed at https://friendly-converter.herokuapp.com/
+
 ### Functionalities
 
 - Length Converter (milimeters, centimeters, inches, feet, yards, meters, kilometers, miles)
