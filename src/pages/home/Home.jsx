@@ -16,8 +16,8 @@ export default function Home() {
       <div className="home-page container">
         <h1>Welcome to Friendly Converter</h1>
         <h2>
-          Choose from the menu the conversion you need and get the result in few
-          seconds!
+          Choose from the menu the conversion you need and get the result in
+          less than a second!
         </h2>
         <div className="icons-container">
           <Link to="/length-converter">

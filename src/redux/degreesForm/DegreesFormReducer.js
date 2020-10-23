@@ -23,7 +23,7 @@ export function degreesFormReducer(state = initialState, action) {
         valueToConvert = (state.degreesInput - 32) / 1.8;
         return {
           ...state,
-          degreesOutput: valueToConvert + " \u2103; (from \u2109)",
+          degreesOutput: valueToConvert + " \u2103 (from \u2109)",
         };
       } else if (action.payload === "C-to-F") {
         valueToConvert = state.degreesInput * 1.8 + 32;
