@@ -35,51 +35,60 @@ export function formReducer(state = initialState, action) {
 
     case UPDATE_OUTPUT:
       let convertedValue;
+      const milimeters = " mm",
+        centimeters = " cm",
+        inches = " inch",
+        feet = " ft.",
+        yards = " yd.",
+        meters = " m",
+        kilometers = " km",
+        miles = " mil.";
+
       // Milimeters To:
       if (state.length1 === "mm" && state.length2 === "mm") {
-        convertedValue = state.input + " mm (from mm)";
+        convertedValue = state.input + milimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "cm") {
-        convertedValue = state.input * 0.1 + " cm (from mm)";
+        convertedValue = state.input * 0.1 + centimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "inch") {
-        convertedValue = state.input * 0.0393700787 + " inch (from mm)";
+        convertedValue = state.input * 0.0393700787 + inches;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "ft") {
-        convertedValue = state.input * 0.0032808 + " ft. (from mm)";
+        convertedValue = state.input * 0.0032808 + feet;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "yards") {
-        convertedValue = state.input * 0.0010936133 + " yd (from mm)";
+        convertedValue = state.input * 0.0010936133 + yards;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "m") {
-        convertedValue = state.input * 0.001 + " m (from mm)";
+        convertedValue = state.input * 0.001 + meters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "km") {
-        convertedValue = state.input * 0.000001 + " km from (mm)";
+        convertedValue = state.input * 0.000001 + kilometers;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "mm" && state.length2 === "miles") {
-        convertedValue = state.input * 0.00000062137 + " mil. (from mm)";
+        convertedValue = state.input * 0.00000062137 + miles;
         return {
           ...state,
           output: convertedValue,
@@ -88,49 +97,49 @@ export function formReducer(state = initialState, action) {
 
       // Centimeters To:
       else if (state.length1 === "cm" && state.length2 === "mm") {
-        convertedValue = state.input / 0.1 + " mm (from cm)";
+        convertedValue = state.input / 0.1 + milimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "cm" && state.length2 === "cm") {
-        convertedValue = state.input + " cm (from cm)";
+        convertedValue = state.input + centimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "cm" && state.length2 === "inch") {
-        convertedValue = state.input * 0.3937 + " inch (from cm)";
+        convertedValue = state.input * 0.3937 + inches;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "cm" && state.length2 === "ft") {
-        convertedValue = state.input * 0.032808 + " ft. (from cm)";
+        convertedValue = state.input * 0.032808 + feet;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "cm" && state.length2 === "yards") {
-        convertedValue = state.input * 0.010936 + " yd. (from cm)";
+        convertedValue = state.input * 0.010936 + yards;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "cm" && state.length2 === "m") {
-        convertedValue = state.input / 100 + " m (from cm)";
+        convertedValue = state.input / 100 + meters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "cm" && state.length2 === "km") {
-        convertedValue = state.input / 100000 + " km (from cm)";
+        convertedValue = state.input / 100000 + kilometers;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "cm" && state.length2 === "miles") {
-        convertedValue = state.input * 0.0000062137 + " mil. (from cm)";
+        convertedValue = state.input * 0.0000062137 + miles;
         return {
           ...state,
           output: convertedValue,
@@ -139,49 +148,49 @@ export function formReducer(state = initialState, action) {
 
       // Inches to:
       else if (state.length1 === "inch" && state.length2 === "mm") {
-        convertedValue = state.input / 0.03937 + " mm (from inch)";
+        convertedValue = state.input / 0.03937 + milimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "inch" && state.length2 === "cm") {
-        convertedValue = state.input / 0.3937 + " cm (from inch)";
+        convertedValue = state.input / 0.3937 + centimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "inch" && state.length2 === "inch") {
-        convertedValue = state.input + " inch (from inch)";
+        convertedValue = state.input + inches;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "inch" && state.length2 === "ft") {
-        convertedValue = state.input * 0.083333 + " ft. (from inch)";
+        convertedValue = state.input * 0.083333 + feet;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "inch" && state.length2 === "yards") {
-        convertedValue = state.input * 0.027778 + " yd. (from inch)";
+        convertedValue = state.input * 0.027778 + yards;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "inch" && state.length2 === "m") {
-        convertedValue = state.input / 39.37 + " m (from inch)";
+        convertedValue = state.input / 39.37 + meters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "inch" && state.length2 === "km") {
-        convertedValue = state.input / 39370 + " km (from inch)";
+        convertedValue = state.input / 39370 + kilometers;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "inch" && state.length2 === "miles") {
-        convertedValue = state.input * 0.000015783 + " mil. (from inch)";
+        convertedValue = state.input * 0.000015783 + miles;
         return {
           ...state,
           output: convertedValue,
@@ -190,49 +199,49 @@ export function formReducer(state = initialState, action) {
 
       // Feet To:
       else if (state.length1 === "ft" && state.length2 === "mm") {
-        convertedValue = state.input / 0.0032808 + " mm (from ft.)";
+        convertedValue = state.input / 0.0032808 + milimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "ft" && state.length2 === "cm") {
-        convertedValue = state.input / 0.032808 + " cm (from ft.)";
+        convertedValue = state.input / 0.032808 + centimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "ft" && state.length2 === "inch") {
-        convertedValue = state.input * 12 + " inch (from ft.)";
+        convertedValue = state.input * 12 + inches;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "ft" && state.length2 === "ft") {
-        convertedValue = state.input + " ft. (from ft.)";
+        convertedValue = state.input + feet;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "ft" && state.length2 === "yards") {
-        convertedValue = state.input * 0.33333 + " yd. (from ft.)";
+        convertedValue = state.input * 0.33333 + yards;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "ft" && state.length2 === "m") {
-        convertedValue = state.input / 3.2808 + " m (from ft.)";
+        convertedValue = state.input / 3.2808 + meters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "ft" && state.length2 === "km") {
-        convertedValue = state.input / 3280.8 + " km (from ft.)";
+        convertedValue = state.input / 3280.8 + kilometers;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "ft" && state.length2 === "miles") {
-        convertedValue = state.input * 0.00018939 + " mil. (from ft.)";
+        convertedValue = state.input * 0.00018939 + miles;
         return {
           ...state,
           output: convertedValue,
@@ -241,49 +250,49 @@ export function formReducer(state = initialState, action) {
 
       // Yards To:
       else if (state.length1 === "yards" && state.length2 === "mm") {
-        convertedValue = state.input / 0.0010936 + " mm (from yd.)";
+        convertedValue = state.input / 0.0010936 + milimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "yards" && state.length2 === "cm") {
-        convertedValue = state.input / 0.010936 + " cm (from yd.)";
+        convertedValue = state.input / 0.010936 + centimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "yards" && state.length2 === "inch") {
-        convertedValue = state.input * 36 + " inch (from yd.)";
+        convertedValue = state.input * 36 + inches;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "yards" && state.length2 === "ft") {
-        convertedValue = state.input * 3 + " ft. (from yd.)";
+        convertedValue = state.input * 3 + feet;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "yards" && state.length2 === "yards") {
-        convertedValue = state.input + " yd. (from yd.)";
+        convertedValue = state.input + yards;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "yards" && state.length2 === "m") {
-        convertedValue = state.input / 1.0936 + " m (from yd.)";
+        convertedValue = state.input / 1.0936 + meters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "yards" && state.length2 === "km") {
-        convertedValue = state.input / 1093.6 + " km (from yd.)";
+        convertedValue = state.input / 1093.6 + kilometers;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "yards" && state.length2 === "miles") {
-        convertedValue = state.input * 0.00056818 + " mil. (from yd.)";
+        convertedValue = state.input * 0.00056818 + miles;
         return {
           ...state,
           output: convertedValue,
@@ -292,49 +301,49 @@ export function formReducer(state = initialState, action) {
 
       // Meters To:
       else if (state.length1 === "m" && state.length2 === "mm") {
-        convertedValue = state.input / 0.001 + " mm (from m)";
+        convertedValue = state.input / 0.001 + milimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "m" && state.length2 === "cm") {
-        convertedValue = state.input / 0.01 + " cm (from m)";
+        convertedValue = state.input / 0.01 + centimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "m" && state.length2 === "inch") {
-        convertedValue = state.input * 39.37 + " inch (from m)";
+        convertedValue = state.input * 39.37 + inches;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "m" && state.length2 === "ft") {
-        convertedValue = state.input * 3.2808 + " ft. (from m)";
+        convertedValue = state.input * 3.2808 + feet;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "m" && state.length2 === "yards") {
-        convertedValue = state.input * 1.0936 + " yd. (from m)";
+        convertedValue = state.input * 1.0936 + yards;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "m" && state.length2 === "m") {
-        convertedValue = state.input + " m (from m)";
+        convertedValue = state.input + meters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "m" && state.length2 === "km") {
-        convertedValue = state.input / 1000 + " km (from m)";
+        convertedValue = state.input / 1000 + kilometers;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "m" && state.length2 === "miles") {
-        convertedValue = state.input * 0.00062137 + " mil. (from m)";
+        convertedValue = state.input * 0.00062137 + miles;
         return {
           ...state,
           output: convertedValue,
@@ -343,49 +352,49 @@ export function formReducer(state = initialState, action) {
 
       // Kilometers To:
       else if (state.length1 === "km" && state.length2 === "mm") {
-        convertedValue = state.input / 0.000001 + " mm (from km)";
+        convertedValue = state.input / 0.000001 + milimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "km" && state.length2 === "cm") {
-        convertedValue = state.input * 100000 + " cm (from km)";
+        convertedValue = state.input * 100000 + centimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "km" && state.length2 === "inch") {
-        convertedValue = state.input * 39370 + " inch (from km)";
+        convertedValue = state.input * 39370 + inches;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "km" && state.length2 === "ft") {
-        convertedValue = state.input * 3280.8 + " ft. (from km)";
+        convertedValue = state.input * 3280.8 + feet;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "km" && state.length2 === "yards") {
-        convertedValue = state.input * 1093.6 + " yd. (from km)";
+        convertedValue = state.input * 1093.6 + yards;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "km" && state.length2 === "m") {
-        convertedValue = state.input * 1000 + " m (from km)";
+        convertedValue = state.input * 1000 + meters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "km" && state.length2 === "km") {
-        convertedValue = state.input + " km (from km)";
+        convertedValue = state.input + kilometers;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "km" && state.length2 === "miles") {
-        convertedValue = state.input * 0.62137 + " mil. (from km)";
+        convertedValue = state.input * 0.62137 + miles;
         return {
           ...state,
           output: convertedValue,
@@ -394,49 +403,49 @@ export function formReducer(state = initialState, action) {
 
       // Miles To:
       else if (state.length1 === "miles" && state.length2 === "mm") {
-        convertedValue = state.input * 0.00000062137 + " mm (from mil.)";
+        convertedValue = state.input * 0.00000062137 + milimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "miles" && state.length2 === "cm") {
-        convertedValue = state.input / 0.0000062137 + " cm (from mil.)";
+        convertedValue = state.input / 0.0000062137 + centimeters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "miles" && state.length2 === "inch") {
-        convertedValue = state.input * 63360 + " inch (from mil.)";
+        convertedValue = state.input * 63360 + inches;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "miles" && state.length2 === "ft") {
-        convertedValue = state.input * 5280 + " ft. (from mil.)";
+        convertedValue = state.input * 5280 + feet;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "miles" && state.length2 === "yards") {
-        convertedValue = state.input * 1760 + " yd. (from mil.)";
+        convertedValue = state.input * 1760 + yards;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "miles" && state.length2 === "m") {
-        convertedValue = state.input / 0.00062137 + " m (from mil.)";
+        convertedValue = state.input / 0.00062137 + meters;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "miles" && state.length2 === "km") {
-        convertedValue = state.input / 0.62137 + " km (from mil.)";
+        convertedValue = state.input / 0.62137 + kilometers;
         return {
           ...state,
           output: convertedValue,
         };
       } else if (state.length1 === "miles" && state.length2 === "miles") {
-        convertedValue = state.input + " mil. (from mil.)";
+        convertedValue = state.input + miles;
         return {
           ...state,
           output: convertedValue,

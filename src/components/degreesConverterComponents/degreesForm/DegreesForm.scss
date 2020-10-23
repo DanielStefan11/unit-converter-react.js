@@ -2,13 +2,14 @@
 
 .degrees-form {
   margin-top: 3rem;
+  width: 100%;
 
   .input-container {
     display: flex;
     flex-direction: column;
 
     & > input {
-      width: 350px;
+      width: 100%;
       padding: 0.5rem;
       font-size: 1.1rem;
       font-family: $main-font;

@@ -11,7 +11,8 @@
 
     & > select {
       padding: 0.5rem;
-      width: 150px;
+      // width: 150px;
+      width: 100%;
       border: 1px solid $layout-color;
       border-radius: 5px;
       color: $layout-color;
@@ -29,7 +30,7 @@
     margin-top: 2rem;
 
     & > * {
-      width: 150px;
+      width: 100px;
       padding: 0.5rem;
       font-size: 1.1rem;
       font-family: $main-font;
