@@ -10,7 +10,7 @@ import { IoIosSpeedometer } from "react-icons/io";
 // React Router
 import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <Layout>
       <div className="home-page container">

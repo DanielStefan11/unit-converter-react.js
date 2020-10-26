@@ -4,7 +4,7 @@ import {
   UPDATE_LENGTH_1,
   UPDATE_LENGTH_2,
   RESET,
-} from "./FormConstants";
+} from "../actionConstants";
 
 const initialState = {
   input: "",

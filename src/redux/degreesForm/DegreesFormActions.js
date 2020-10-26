@@ -2,7 +2,7 @@ import {
   UPDATE_DEGREES_INPUT,
   UPDATE_DEGREES_OUTPUT,
   RESET_DEGREES,
-} from "./DegreesFormConstants";
+} from "../actionConstants";
 
 export function updateDegreesInput(payload) {
   return {
