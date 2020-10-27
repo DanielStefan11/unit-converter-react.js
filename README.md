@@ -2,7 +2,7 @@
 
 Simple Converter created with React.js and Redux.
 
-Deployed at https://friendly-converter.herokuapp.com/
+**Deployed at:** https://friendly-converter.herokuapp.com/
 
 ### Functionalities
 
