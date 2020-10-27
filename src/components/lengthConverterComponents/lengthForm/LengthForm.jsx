@@ -10,6 +10,7 @@ function LengthForm(props) {
     <form className="length-form">
       <input
         type="number"
+        className={`${props.darkModeOn && "dark-mode-colors"}`}
         value={props.inputValue}
         placeholder="Input Value"
         onChange={(e) => {
@@ -32,6 +33,7 @@ function mapStateToProps(state) {
   return {
     inputValue: state.form.input,
     outputValue: state.form.output,
+    darkModeOn: state.darkModeFunction.darkMode,
   };
 }
 

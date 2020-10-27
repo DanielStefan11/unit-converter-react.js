@@ -15,6 +15,7 @@ function DegreesForm(props) {
       <div className="input-container">
         <input
           type="number"
+          className={`${props.darkModeOn && "dark-mode-colors"}`}
           placeholder="Insert value to convert"
           value={props.degreesInputValue}
           onChange={(e) => {
@@ -32,6 +33,7 @@ function DegreesForm(props) {
 
       <div className="btns-container">
         <select
+          className={`${props.darkModeOn && "dark-mode-colors"}`}
           name="convert"
           onChange={(e) => {
             let convertingMode = e.target.value;
@@ -56,6 +58,7 @@ function mapStateToProps(state) {
   return {
     degreesInputValue: state.degreesForm.degreesInput,
     degreesOutputValue: state.degreesForm.degreesOutput,
+    darkModeOn: state.darkModeFunction.darkMode,
   };
 }
 

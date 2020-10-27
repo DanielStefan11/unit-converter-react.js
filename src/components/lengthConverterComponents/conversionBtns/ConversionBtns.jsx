@@ -17,6 +17,7 @@ function ConversionBtns(props) {
     <form className="length-btns">
       <div className="select-container">
         <select
+          className={`${props.darkModeOn && "dark-mode-colors"}`}
           name="length-1"
           onChange={(e) => {
             let valueOfLength1 = e.target.value;
@@ -35,6 +36,7 @@ function ConversionBtns(props) {
         </select>
 
         <select
+          className={`${props.darkModeOn && "dark-mode-colors"}`}
           name="length-2"
           onChange={(e) => {
             let valueOfLength2 = e.target.value;
@@ -71,6 +73,12 @@ function ConversionBtns(props) {
   );
 }
 
+function mapStateToProps(state) {
+  return {
+    darkModeOn: state.darkModeFunction.darkMode,
+  };
+}
+
 function mapDispatchToProps(dispatch) {
   return {
     updateOutput: () => dispatch(updateOutput()),
@@ -80,4 +88,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(null, mapDispatchToProps)(ConversionBtns);
+export default connect(mapStateToProps, mapDispatchToProps)(ConversionBtns);

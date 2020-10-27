@@ -17,6 +17,7 @@
 
     &:first-child {
       color: $layout-color;
+      transition: all 0.3s ease-in-out;
 
       &::placeholder {
         color: $layout-color;

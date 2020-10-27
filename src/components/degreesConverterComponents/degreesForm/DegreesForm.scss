@@ -18,6 +18,7 @@
       margin-top: 2rem;
       border-radius: 30px;
       outline: none;
+      transition: all 0.3s ease-in-out;
 
       &:first-child::placeholder {
         color: $layout-color;
@@ -49,6 +50,7 @@
       color: $layout-color;
       font-family: $main-font;
       outline: none;
+      transition: all 0.3s ease-in-out;
     }
 
     input[type="reset"] {
