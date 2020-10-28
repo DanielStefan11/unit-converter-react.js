@@ -16,3 +16,4 @@ Simple Converter created with React.js and Redux.
 - SASS (CSS3)
 - Redux
 - React Icons
+- React Router
