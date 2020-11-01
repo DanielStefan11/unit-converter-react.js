@@ -2,7 +2,7 @@
 
 Simple Converter created with React.js and Redux.
 
-Deployed at https://friendly-converter.herokuapp.com/
+**Deployed at:** https://friendly-converter.herokuapp.com/
 
 ### Functionalities
 
@@ -17,3 +17,4 @@ Deployed at https://friendly-converter.herokuapp.com/
 - SASS (CSS3)
 - Redux
 - React Icons
+- React Router
