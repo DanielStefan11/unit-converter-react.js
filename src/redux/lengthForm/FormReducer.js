@@ -35,7 +35,7 @@ export function formReducer(state = initialState, action) {
 
     case UPDATE_OUTPUT:
       let convertedValue;
-      const milimeters = " mm",
+      const millimeters = " mm",
         centimeters = " cm",
         inches = " inch",
         feet = " ft.",
@@ -44,9 +44,9 @@ export function formReducer(state = initialState, action) {
         kilometers = " km",
         miles = " mil.";
 
-      // Milimeters To:
+      // millimeters To:
       if (state.length1 === "mm" && state.length2 === "mm") {
-        convertedValue = state.input + milimeters;
+        convertedValue = state.input + millimeters;
         return {
           ...state,
           output: convertedValue,
@@ -97,7 +97,7 @@ export function formReducer(state = initialState, action) {
 
       // Centimeters To:
       else if (state.length1 === "cm" && state.length2 === "mm") {
-        convertedValue = state.input / 0.1 + milimeters;
+        convertedValue = state.input / 0.1 + millimeters;
         return {
           ...state,
           output: convertedValue,
@@ -148,7 +148,7 @@ export function formReducer(state = initialState, action) {
 
       // Inches to:
       else if (state.length1 === "inch" && state.length2 === "mm") {
-        convertedValue = state.input / 0.03937 + milimeters;
+        convertedValue = state.input / 0.03937 + millimeters;
         return {
           ...state,
           output: convertedValue,
@@ -199,7 +199,7 @@ export function formReducer(state = initialState, action) {
 
       // Feet To:
       else if (state.length1 === "ft" && state.length2 === "mm") {
-        convertedValue = state.input / 0.0032808 + milimeters;
+        convertedValue = state.input / 0.0032808 + millimeters;
         return {
           ...state,
           output: convertedValue,
@@ -250,7 +250,7 @@ export function formReducer(state = initialState, action) {
 
       // Yards To:
       else if (state.length1 === "yards" && state.length2 === "mm") {
-        convertedValue = state.input / 0.0010936 + milimeters;
+        convertedValue = state.input / 0.0010936 + millimeters;
         return {
           ...state,
           output: convertedValue,
@@ -301,7 +301,7 @@ export function formReducer(state = initialState, action) {
 
       // Meters To:
       else if (state.length1 === "m" && state.length2 === "mm") {
-        convertedValue = state.input / 0.001 + milimeters;
+        convertedValue = state.input / 0.001 + millimeters;
         return {
           ...state,
           output: convertedValue,
@@ -352,7 +352,7 @@ export function formReducer(state = initialState, action) {
 
       // Kilometers To:
       else if (state.length1 === "km" && state.length2 === "mm") {
-        convertedValue = state.input / 0.000001 + milimeters;
+        convertedValue = state.input / 0.000001 + millimeters;
         return {
           ...state,
           output: convertedValue,
@@ -403,7 +403,7 @@ export function formReducer(state = initialState, action) {
 
       // Miles To:
       else if (state.length1 === "miles" && state.length2 === "mm") {
-        convertedValue = state.input * 0.00000062137 + milimeters;
+        convertedValue = state.input * 0.00000062137 + millimeters;
         return {
           ...state,
           output: convertedValue,
