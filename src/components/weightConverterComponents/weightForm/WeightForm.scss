@@ -1,19 +1,19 @@
 @import "../../../styleConfigs";
 
-.length-form {
+.weight-form {
   display: flex;
   flex-direction: column;
 
   & > input {
-    margin-top: 1rem;
+    margin: 1rem 0;
     padding: 0.5rem;
-    border: 1px solid $layout-color;
     border-radius: 30px;
-    font-family: $main-font;
     font-size: 1.1rem;
     outline: none;
+    font-family: $main-font;
 
     &:first-child {
+      border: 1px solid $layout-color;
       color: $layout-color;
       transition: all 0.3s ease-in-out;
 

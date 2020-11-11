@@ -9,6 +9,17 @@ export const UPDATE_LENGTH_2 = "UPDATE_LENGTH_2";
 
 export const RESET = "RESET";
 
+// Weight Converter
+export const UPDATE_WEIGHT_INPUT = "UPDATE_WEIGHT_INPUT";
+
+export const UPDATE_WEIGHT_OUTPUT = "UPDATE_WEIGHT_OUTPUT";
+
+export const UPDATE_WEIGHT_1 = "UPDATE_WEIGHT_1";
+
+export const UPDATE_WEIGHT_2 = "UPDATE_WEIGHT_2";
+
+export const RESET_WEIGHT = "RESET_WEIGHT";
+
 // Degrees Converter
 export const UPDATE_DEGREES_INPUT = "UPDATE_DEGREES_INPUT";
 

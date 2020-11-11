@@ -9,7 +9,7 @@ import "./LengthConverter.scss";
 export default function LengthConverter() {
   return (
     <Layout>
-      <div className="container length-page">
+      <div className="length-converter">
         <h1>Length Converter</h1>
         <LengthForm />
         <ConversionBtns />

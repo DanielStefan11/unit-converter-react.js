@@ -6,7 +6,7 @@ import "./Home.scss";
 // React Icons
 import { MdSwapVerticalCircle } from "react-icons/md";
 import { FaTemperatureHigh } from "react-icons/fa";
-import { IoIosSpeedometer } from "react-icons/io";
+import { GiWeight } from "react-icons/gi";
 // React Router
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,9 @@ export default function Home(props) {
           <Link to="/length-converter">
             <MdSwapVerticalCircle className="converter-icon" />
           </Link>
-          <IoIosSpeedometer className="speed-icon" />
+          <Link to="/weight-converter">
+            <GiWeight className="weight-icon" />
+          </Link>
           <Link to="/degrees-converter">
             <FaTemperatureHigh className="termometer-icon" />
           </Link>

@@ -39,13 +39,13 @@
     }
   }
 
-  .speed-icon {
+  .weight-icon {
     position: absolute;
     top: 40%;
     left: 30%;
     font-size: 6rem;
     transform: rotate(-25deg);
-    color: $speed-icon-color;
+    color: $weight-icon-color;
     transition: all 0.3s ease-in-out;
 
     &:hover {

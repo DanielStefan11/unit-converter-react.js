@@ -61,6 +61,17 @@ function Navbar(props) {
           </NavLink>
 
           <NavLink
+            to="/weight-converter"
+            activeStyle={{
+              color: "#66d9ff",
+              fontWeight: "bold",
+            }}
+            className="links"
+          >
+            Weight
+          </NavLink>
+
+          <NavLink
             to="degrees-converter"
             activeStyle={{
               color: "#66d9ff",

@@ -1,14 +1,14 @@
 @import "../../../styleConfigs";
 
-.length-btns {
-  margin-top: 3rem;
+form {
+  margin-top: 1.5rem;
 
   .select-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
 
     & > select {
+      width: 150px;
       padding: 0.5rem;
       border: 1px solid $layout-color;
       border-radius: 5px;
@@ -23,32 +23,33 @@
   }
 
   .btns-container {
+    margin: 2.5rem 0 1rem 0;
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
 
     & > * {
+      width: 100px;
       padding: 0.5rem;
       font-size: 1.1rem;
       font-family: $main-font;
       cursor: pointer;
-    }
 
-    .convert-btn:first-child {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      border: 1px solid $layout-color;
-      background-color: transparent;
-      color: $layout-color;
-      transition: all 0.3s ease-in-out;
-      border-radius: 5px;
-      outline: none;
+      &:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border: 1px solid $layout-color;
+        background-color: transparent;
+        color: $layout-color;
+        transition: all 0.3s ease-in-out;
+        border-radius: 5px;
+        outline: none;
 
-      &:hover,
-      &:focus {
-        background-color: $layout-color;
-        color: $light-color;
+        &:hover,
+        &:focus {
+          background-color: $layout-color;
+          color: $light-color;
+        }
       }
     }
 
