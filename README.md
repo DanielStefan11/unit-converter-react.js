@@ -8,6 +8,7 @@ Simple Converter created with React.js and Redux.
 
 - Length Converter (millimeters, centimeters, inches, feet, yards, meters, kilometers, miles)
 - Degrees/Temperature Converter (Fahrenheit to Celsius and Celsius to Fahrenheit)
+- Weight Converter (grams, pounds, stones, kilograms, tons)
 - Night Mode
 - More functionalities soon ...
 
