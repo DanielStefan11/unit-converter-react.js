@@ -17,5 +17,6 @@ Simple Converter created with React.js and Redux.
 - React.js (create-react-app)
 - SASS (CSS3)
 - Redux
+- Redux Thunk
 - React Icons
 - React Router
