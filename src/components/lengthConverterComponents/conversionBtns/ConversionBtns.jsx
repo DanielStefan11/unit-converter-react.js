@@ -57,7 +57,9 @@ function ConversionBtns(props) {
 
       <div className="btns-container">
         <button
-          className="convert-btn"
+          className={`convert-btn ${
+            props.darkModeOn && "dark-mode-length-convert"
+          }`}
           onClick={(e) => {
             e.preventDefault();
             props.updateOutput();

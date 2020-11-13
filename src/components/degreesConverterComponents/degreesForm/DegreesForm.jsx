@@ -49,6 +49,9 @@ function DegreesForm(props) {
             <option value="C-to-F">Celsius to Fahrenheit</option>
           </select>
           <input
+            className={`degrees-reset-btn ${
+              props.darkModeOn && "dark-mode-degrees-reset-btn"
+            }`}
             type="reset"
             value="Reset"
             onClick={() => props.resetDegrees()}
@@ -72,7 +75,9 @@ function DegreesForm(props) {
             props.showAndRemoveCopiedMessage();
           }}
         >
-          <p className="copy-btn">Copy to clipboard</p>
+          <p className={`copy-btn ${props.darkModeOn && "dark-mode-btn"}`}>
+            Copy to clipboard
+          </p>
         </CopyToClipboard>
       </div>
     </div>

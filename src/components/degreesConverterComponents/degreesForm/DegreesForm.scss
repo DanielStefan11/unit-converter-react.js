@@ -53,7 +53,7 @@
       transition: all 0.3s ease-in-out;
     }
 
-    input[type="reset"] {
+    .degrees-reset-btn {
       width: 250px;
       padding: 0.5rem;
       margin-top: 3rem;
@@ -73,6 +73,11 @@
         background-color: $layout-color;
         color: $contrast-color;
       }
+    }
+
+    .dark-mode-degrees-reset-btn {
+      color: $contrast-color;
+      border: 2px solid $contrast-color;
     }
   }
 }

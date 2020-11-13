@@ -9,6 +9,8 @@ import {
 } from "../../../redux/weight/WeightActions";
 // Style
 import "./WeightConversionBtns.scss";
+// React Icons
+import { SiConvertio } from "react-icons/si";
 
 function WeightConversionBtns(props) {
   return (
@@ -49,11 +51,15 @@ function WeightConversionBtns(props) {
 
       <div className="btns-container">
         <button
+          className={`weight-converter-btn ${
+            props.darkModeOn && "dark-mode-convert-btn"
+          }`}
           onClick={(e) => {
             e.preventDefault();
             props.updateWeightOutput();
           }}
         >
+          <SiConvertio />
           Convert
         </button>
         <input type="reset" value="Reset" onClick={() => props.resetWeight()} />

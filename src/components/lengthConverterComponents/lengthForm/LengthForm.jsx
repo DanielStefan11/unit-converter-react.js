@@ -47,7 +47,9 @@ function LengthForm(props) {
             props.showAndRemoveCopiedMessage();
           }}
         >
-          <button className="copy-btn">Copy to clipboard</button>
+          <button className={`copy-btn ${props.darkModeOn && "dark-mode-btn"}`}>
+            Copy to clipboard
+          </button>
         </CopyToClipboard>
       </div>
     </div>

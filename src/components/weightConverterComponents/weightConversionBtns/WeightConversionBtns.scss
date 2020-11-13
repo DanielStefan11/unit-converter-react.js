@@ -33,24 +33,29 @@ form {
       font-size: 1.1rem;
       font-family: $main-font;
       cursor: pointer;
+    }
 
-      &:first-child {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        border: 1px solid $layout-color;
-        background-color: transparent;
-        color: $layout-color;
-        transition: all 0.3s ease-in-out;
-        border-radius: 5px;
-        outline: none;
+    .weight-converter-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      border: 1px solid $layout-color;
+      background-color: transparent;
+      color: $layout-color;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+      outline: none;
 
-        &:hover,
-        &:focus {
-          background-color: $layout-color;
-          color: $light-color;
-        }
+      &:hover,
+      &:focus {
+        background-color: $layout-color;
+        color: $light-color;
       }
+    }
+
+    .dark-mode-convert-btn {
+      color: $contrast-color;
+      border: 2px solid $contrast-color;
     }
 
     input[type="reset"] {
