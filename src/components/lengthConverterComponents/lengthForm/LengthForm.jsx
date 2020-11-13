@@ -42,7 +42,7 @@ function LengthForm(props) {
         )}
 
         <CopyToClipboard
-          text={props.weightOutputValue}
+          text={props.outputValue}
           onCopy={() => {
             props.showAndRemoveCopiedMessage();
           }}

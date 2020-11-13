@@ -70,7 +70,7 @@ function DegreesForm(props) {
         )}
 
         <CopyToClipboard
-          text={props.weightOutputValue}
+          text={props.degreesOutputValue}
           onCopy={() => {
             props.showAndRemoveCopiedMessage();
           }}
