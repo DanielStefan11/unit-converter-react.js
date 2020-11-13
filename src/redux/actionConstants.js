@@ -32,3 +32,8 @@ export const ENABLE_DARK_MODE = "ENABLE_DARK_MODE";
 
 // Burger Menu
 export const BUGER_ICON_CLICKED = "BUGER_ICON_CLICKED";
+
+// Copy To Clipboard
+export const SHOW_COPIED_MESSAGE = "SHOW_COPIED_MESSAGE";
+
+export const REMOVE_COPIED_MESSAGE = "REMOVE_COPIED_MESSAGE";

@@ -6,51 +6,76 @@ import {
   updateDegreesOutput,
   resetDegrees,
 } from "../../../redux/degreesForm/DegreesFormActions";
+import { showAndRemoveCopiedMessage } from "../../../redux/copyToClipboard/copyToClipboardActions";
 // Style
 import "./DegreesForm.scss";
+// Copy to clipboard
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 function DegreesForm(props) {
   return (
-    <form className="degrees-form">
-      <div className="input-container">
-        <input
-          type="number"
-          className={`${props.darkModeOn && "dark-mode-colors"}`}
-          placeholder="Insert value to convert"
-          value={props.degreesInputValue}
-          onChange={(e) => {
-            let valueForConverting = e.target.value;
-            props.updateDegreesInput(valueForConverting);
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Output"
-          value={props.degreesOutputValue}
-          disabled
-        />
-      </div>
+    <div>
+      <form className="degrees-form">
+        <div className="input-container">
+          <input
+            type="number"
+            className={`${props.darkModeOn && "dark-mode-colors"}`}
+            placeholder="Insert value to convert"
+            value={props.degreesInputValue}
+            onChange={(e) => {
+              let valueForConverting = e.target.value;
+              props.updateDegreesInput(valueForConverting);
+            }}
+          />
+          <input
+            type="text"
+            placeholder="Output"
+            value={props.degreesOutputValue}
+            disabled
+          />
+        </div>
 
-      <div className="btns-container">
-        <select
-          className={`${props.darkModeOn && "dark-mode-colors"}`}
-          name="convert"
-          onChange={(e) => {
-            let convertingMode = e.target.value;
-            props.updateDegreesOutput(convertingMode);
+        <div className="btns-container">
+          <select
+            className={`${props.darkModeOn && "dark-mode-colors"}`}
+            name="convert"
+            onChange={(e) => {
+              let convertingMode = e.target.value;
+              props.updateDegreesOutput(convertingMode);
+            }}
+          >
+            <option value="default">Choose how to convert</option>
+            <option value="F-to-C">Fahrenheit to Celsius</option>
+            <option value="C-to-F">Celsius to Fahrenheit</option>
+          </select>
+          <input
+            type="reset"
+            value="Reset"
+            onClick={() => props.resetDegrees()}
+          />
+        </div>
+      </form>
+      <div className="copy-btn-container">
+        {props.copiedText && (
+          <span
+            className={`${
+              props.darkModeOn ? "dark-mode-span" : "light-mode-span"
+            }`}
+          >
+            Value Copied
+          </span>
+        )}
+
+        <CopyToClipboard
+          text={props.weightOutputValue}
+          onCopy={() => {
+            props.showAndRemoveCopiedMessage();
           }}
         >
-          <option value="default">Choose how to convert</option>
-          <option value="F-to-C">Fahrenheit to Celsius</option>
-          <option value="C-to-F">Celsius to Fahrenheit</option>
-        </select>
-        <input
-          type="reset"
-          value="Reset"
-          onClick={() => props.resetDegrees()}
-        />
+          <p className="copy-btn">Copy to clipboard</p>
+        </CopyToClipboard>
       </div>
-    </form>
+    </div>
   );
 }
 
@@ -59,6 +84,7 @@ function mapStateToProps(state) {
     degreesInputValue: state.degreesForm.degreesInput,
     degreesOutputValue: state.degreesForm.degreesOutput,
     darkModeOn: state.darkModeFunction.darkMode,
+    copiedText: state.textCopied.copied,
   };
 }
 
@@ -67,6 +93,7 @@ function mapDispatchToProps(dispatch) {
     updateDegreesInput: (payload) => dispatch(updateDegreesInput(payload)),
     updateDegreesOutput: (payload) => dispatch(updateDegreesOutput(payload)),
     resetDegrees: () => dispatch(resetDegrees()),
+    showAndRemoveCopiedMessage: () => dispatch(showAndRemoveCopiedMessage()),
   };
 }
 

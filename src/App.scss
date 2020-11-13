@@ -23,3 +23,36 @@ h1 {
 .dark-mode-colors {
   background-color: $dark-mode-gray;
 }
+
+.copy-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .light-mode-span {
+    color: $light-message-color;
+    margin-bottom: 0.5rem;
+  }
+
+  .dark-mode-span {
+    color: $dark-message-color;
+    margin-bottom: 0.5rem;
+  }
+
+  .copy-btn {
+    background-color: transparent;
+    border: 2px solid $layout-color;
+    padding: 0.2rem 1rem;
+    border-radius: 40px;
+    color: $layout-color;
+    font-family: $main-font;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+
+    &:hover {
+      background-color: $layout-color;
+      color: $light-color;
+    }
+  }
+}

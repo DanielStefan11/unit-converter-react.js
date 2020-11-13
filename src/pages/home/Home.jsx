@@ -10,7 +10,7 @@ import { GiWeight } from "react-icons/gi";
 // React Router
 import { Link } from "react-router-dom";
 
-export default function Home(props) {
+export default function Home() {
   return (
     <Layout>
       <div className="home-page container">
