@@ -2,6 +2,7 @@
 
 Simple Converter created with React.js and Redux.
 
+Deployed: https://demo-unit-converter.netlify.app
 
 ### Functionalities
 
