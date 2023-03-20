@@ -6,7 +6,6 @@ import "./Home.scss";
 // React Icons
 import { MdSwapVerticalCircle } from "react-icons/md";
 import { FaTemperatureHigh } from "react-icons/fa";
-import { IoIosSpeedometer } from "react-icons/io";
 // React Router
 import { Link } from "react-router-dom";
 
@@ -19,13 +18,18 @@ export default function Home() {
           Choose from the menu the conversion you need and get the result in
           less than a second!
         </h2>
-        <div className="icons-container">
+        <div className="cards-container">
           <Link to="/length-converter">
-            <MdSwapVerticalCircle className="converter-icon" />
+            <div className="link-card">
+              <MdSwapVerticalCircle className="icon converter-icon" />
+              <h5>Length Converter</h5>
+            </div>
           </Link>
-          <IoIosSpeedometer className="speed-icon" />
           <Link to="/degrees-converter">
-            <FaTemperatureHigh className="termometer-icon" />
+            <div className="link-card">
+              <FaTemperatureHigh className="icon termometer-icon" />
+              <h5>Degrees Converter</h5>
+            </div>
           </Link>
         </div>
       </div>
